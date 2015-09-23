@@ -1,5 +1,6 @@
 .octodex {
-font: normal normal normal 40px/1.4 arial;
+font: bold 30px/1.4 arial;
+height: 1000px;
 }
 
 .octocat {
@@ -17,11 +18,10 @@ border-radius: 10px;
 a {
   color: black;
   text-decoration: none;
+  position: relative;
+  bottom: 30px;
+  left: 20px;
 
-}
-
-a span {
-padding-bottom: 20px;
 }
 
 li {
@@ -30,12 +30,18 @@ li {
 
 span {
   color: gray;
+  position: relative;
+  padding-bottom: 10px;
+  position: relative;
+  bottom: 30px;
+  left: 20px;
 }
 
 
 span.image-number{
   color: lightgrey;
-
+  position: relative;
+  top: 15px;
 }
 
 span.image-number:before {
@@ -45,18 +51,26 @@ span.image-number:before {
 
 .authors img {
 width: 75px;
-margin-right:10px;
 float: right;
 border-color: white;
 border-radius: 15px;
 
 }
 
-.image-footer {
-height: 40px;
-width: 900px;
-padding: 10px;
+.image-footer:after {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 100px 100px 0 100px;
+  border-color: lightgray transparent transparent transparent;
+  position: absolute;
+}
 
+.image-footer {
+  height: 40px;
+  width: 900px;
+  padding: 10px;
+  position: relative;
 }
 
 .authors {
@@ -64,8 +78,6 @@ padding: 10px;
  }
 
 .image-caption {
-position: relative;
-float: right;
-padding-bottom: 30px;
-padding-top: 10px;
+  float: right;
+  display: inline-block;
 }
